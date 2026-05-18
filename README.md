@@ -123,13 +123,6 @@ The script generates three PNG files:
 
 ---
 
-## Author
-
-
-
-
-
-## Author
 
 ## Author
 
