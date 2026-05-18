@@ -131,7 +131,9 @@ The script generates three PNG files:
 
 ## Author
 
-Syed Mohammad Zaheen
-MSc Quantitative Finance
-LinkedIn: [iamzaheen](https://linkedin.com/in/iamzaheen)
-GitHub: [iamzaheen](https://github.com/iamzaheen)
+## Author
+
+Syed Mohammad Zaheen  
+MSc Quantitative Finance  
+LinkedIn: https://linkedin.com/in/iamzaheen  
+GitHub: https://github.com/iamzaheen
