@@ -128,5 +128,5 @@ The script generates three PNG files:
 
 Syed Mohammad Zaheen  
 MSc Quantitative Finance  
-LinkedIn: https://linkedin.com/in/iamzaheen  
-GitHub: https://github.com/iamzaheen
+LinkedIn: [iamzaheen](https://linkedin.com/in/iamzaheen)
+GitHub: [iamzaheen](https://github.com/iamzaheen) 
