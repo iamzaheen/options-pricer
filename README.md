@@ -2,7 +2,7 @@
 
 A Python implementation of European options pricing using two methods: the **Black-Scholes closed-form solution** and **Monte Carlo simulation**. Includes calculation of all five major Greeks.
 
-Built as part of an MSc Quantitative Finance portfolio.
+Built as part of an 
 
 ---
 
@@ -125,6 +125,13 @@ The script generates three PNG files:
 
 ## Author
 
-MSc Quantitative Finance  
-[Your University]  
-[Your LinkedIn]
+
+
+
+
+## Author
+
+Syed Mohammad Zaheen
+MSc Quantitative Finance
+LinkedIn: [iamzaheen](https://linkedin.com/in/iamzaheen)
+GitHub: [iamzaheen](https://github.com/iamzaheen)
