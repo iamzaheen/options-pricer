@@ -2,7 +2,7 @@
 
 A Python implementation of European options pricing using two methods: the **Black-Scholes closed-form solution** and **Monte Carlo simulation**. Includes calculation of all five major Greeks.
 
-Built as part of an 
+Built as part of an MSc Quantitative Finance portfolio at the University of Kiel.
 
 ---
 
@@ -14,6 +14,19 @@ Built as part of an
 | Monte Carlo simulation | 100,000-path numerical pricing with confidence intervals |
 | The Greeks | Delta, Gamma, Vega, Theta, Rho — all computed and visualised |
 | Visualisations | Payoff diagram, MC distribution, Greeks vs spot price |
+
+---
+
+## Charts
+
+### Payoff Diagram
+![Payoff Diagram](payoff_diagram.png)
+
+### Monte Carlo Simulation
+![Monte Carlo Distribution](mc_distribution.png)
+
+### Option Greeks
+![Greeks](greeks.png)
 
 ---
 
@@ -51,7 +64,7 @@ Averages discounted payoffs across all simulated paths.
 ## Usage
 
 ```bash
-pip install numpy scipy matplotlib pandas
+pip install numpy scipy matplotlib
 python options_pricer.py
 ```
 
@@ -60,73 +73,58 @@ python options_pricer.py
 ```
 EUROPEAN OPTIONS PRICER
 Parameters:
-  Stock price  S = $100
-  Strike price K = $105
-  Time to expiry = 0.5 years (6 months)
-  Risk-free rate = 5.0%
-  Volatility     = 20.0%
+  Stock price    S = 100
+  Strike price   K = 105
+  Time to expiry   = 0.5 years (6 months)
+  Risk-free rate   = 5.0%
+  Volatility       = 20.0%
 
 BLACK-SCHOLES RESULT
-  Option price = $6.0441
+  d1 = -0.0975  |  d2 = -0.2389
+  Option price = 4.5817
+
+GREEKS
+  Delta = 0.4612  -> option moves 0.46 per $1 stock move
+  Gamma = 0.0281  -> delta changes by 0.0281 per $1 move
+  Vega  = 0.2808  -> price changes 0.2808 per 1% vol change
+  Theta = -0.0211 -> option loses 0.0211 per day
+  Rho   = 0.2077  -> price changes 0.2077 per 1% rate change
 
 MONTE CARLO RESULT (100,000 simulations)
-  Option price = $6.0387
-  95% CI       = [$5.9856, $6.0919]
-  Difference from B-S: $0.0054
+  Option price = 4.5952
+  Std error    = 0.0259
+  95% CI       = [4.5444, 4.6460]
+  Difference from BS = 0.0135
 ```
-
-### Change the parameters
-
-Edit the parameters block in `options_pricer.py`:
-
-```python
-S     = 100    # Current stock price
-K     = 105    # Strike price
-T     = 0.5    # Time to expiry in years
-r     = 0.05   # Risk-free rate
-sigma = 0.20   # Annual volatility
-otype = 'call' # 'call' or 'put'
-```
-
----
-
-## Output charts
-
-The script generates three PNG files:
-
-- `payoff_diagram.png` — Option price vs stock price, showing time value
-- `mc_distribution.png` — Distribution of simulated terminal prices and payoffs
-- `greeks.png` — All 5 Greeks plotted against the stock price
 
 ---
 
 ## Key concepts demonstrated
 
-**Delta** — How much the option price moves per $1 change in the stock. A delta of 0.45 means the option gains $0.45 for every $1 the stock rises.
+**Delta** — How much the option price moves per $1 change in the stock.
 
-**Gamma** — How fast delta changes. High gamma = option is very sensitive near the strike.
+**Gamma** — How fast delta changes. High gamma means the option is very sensitive near the strike.
 
 **Vega** — Sensitivity to volatility. Buying options is implicitly a bet on volatility increasing.
 
 **Theta** — Time decay. Options lose value every day as expiry approaches.
 
-**Rho** — Sensitivity to interest rates. Less important for short-dated options.
+**Rho** — Sensitivity to interest rates.
 
 ---
 
 ## Next steps / extensions
 
-- [ ] Add implied volatility solver (given market price, solve for σ)
-- [ ] Price American options using Binomial Tree model
-- [ ] Add volatility smile / surface visualisation
-- [ ] Build a simple delta-hedging simulation
+- [ ] Implied volatility solver (given market price, solve for σ)
+- [ ] American options pricing using Binomial Tree
+- [ ] Volatility smile visualisation
+- [ ] Delta-hedging simulation
 
 ---
 
-
 ## Author
 
-Syed Mohammad Zaheen  
-MSc Quantitative Finance  
+Syed Mohammad Zaheen
+MSc Quantitative Finance, University of Kiel
 LinkedIn: [iamzaheen](https://linkedin.com/in/iamzaheen)
-GitHub: [iamzaheen](https://github.com/iamzaheen) 
+GitHub: [iamzaheen](https://github.com/iamzaheen)
